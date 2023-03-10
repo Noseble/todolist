@@ -108,7 +108,6 @@ const TodoItem = ({ todo, onToggleDone, onSave, onDelete, onChangeMode }) => {
     if (inputRef.current.value.length > 0 && event.key === 'Enter') {
       onSave?.({ id: todo.id, title: inputRef.current.value });
     }
-
     if (event.key === 'Escape') {
       onChangeMode?.({ id: todo.id, isEdit: false });
     }
